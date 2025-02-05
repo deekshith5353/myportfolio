@@ -19,6 +19,17 @@ body{
     background-size: cover;
     background-position: center;
 }
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  /* When the element comes into view */
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 .container{
     padding:0px 10%;
