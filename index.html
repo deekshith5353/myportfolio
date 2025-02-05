@@ -9,9 +9,9 @@
 </head>
 <body>
     <div id="header">
-        <div class="container">
+        <div class="container"> 
             <nav>
-                <img src="logo.jpg" class="logo">
+                <img src="images/logo.jpg" class="logo">
                 <ul id="sidemenu">
                     <li>
                        <li><a href="#header">Home</a></li> 
@@ -24,8 +24,10 @@
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
+                <div class="fade-in">
                 <p>Electronics Engineer</p>
                 <h1>Hello,I'm <span>Deekshith </span><br>From Bangalore</h1>
+               </div>
             </div>
         </div>
     </div>
@@ -33,9 +35,12 @@
     <div class="container">
         <div class="row">
             <div class="col1">
-                <img src="mypicture.jpeg">
+                <div class="fade-in">
+                <img src="images/mypicture.jpeg">
+                </div>
             </div>
             <div class="col2">
+                <div class="fade-in">
                 <h1 class="subtitle">About Me</h1>
                 <p>I’m an Electronics engineering student with a passion for blending innovation and technology to create impactful solutions. 
                     With hands-on experience in IoT, embedded systems, and VLSI, I thrive at the intersection of creativity and practicality. 
@@ -48,6 +53,7 @@
                       <p class="tab-links" onclick="opentab('experience')">Experience</p>
                       <p class="tab-links" onclick="opentab('education')">Educations</p>
                     </div>
+                </div>
                     <div class="tab-contents active-tab" id="skills">
                         <ul>
                             <li><span>Web Developement</span><br>Web Design And Developement</li>
@@ -76,6 +82,7 @@
 <!------------------>
 <div id="MyWorks">
     <div class="container">
+        <div class="fade-in">
         <h1 class="subtitle">My Works</h1>
         <div class="worklists">
             <div>
@@ -103,20 +110,22 @@
                 <a href="#">Learn more</a>
             </div>
         </div>
+        </div>
     </div>
 </div>
 <div id="contact">
     <div class="container">
-        <div class="row">
+        <div class="fade-in">
+         <div class="row">
             <div class="contact-left">
                 <h1 class="subtitle">Contact Me</h1>
                 <p><i class="fa-solid fa-paper-plane"></i>deekshith5353@gmail.com</p>
                 <p><i class="fa-solid fa-phone"></i>+91 9663816573</p>
                 <div class="socialicons">
-                    <a href="https://www.instagram.com/me.deekshith/"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/S-Deekshith/"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <a href="S_DEEKSHITH_RESUME.pdf" download class="btn">Download CV</a>
+                <a href="images/S_DEEKSHITH_RESUME.pdf" download class="btn">Download CV</a>
             </div>
 
             <div class="contact-right">
@@ -127,6 +136,7 @@
                   <button type="submit" class="btn btn1">Submit</button>
                 </form>
                 <span id="msg"></span>
+            </div>
             </div>
         </div>
     </div>
@@ -175,5 +185,29 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+  <script>
+    window.addEventListener("load", () => {
+    document.querySelector(".header-text").classList.add("loaded");
+});
+</script>
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll(".fade-in");
+
+    function checkScroll() {
+        elements.forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight - 50) {
+                el.classList.add("visible");
+            } else {
+                el.classList.remove("visible"); // Remove class when scrolled back up
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkScroll);
+    checkScroll(); // Run once on load
+});
+
+</script>
 </body>
 </html>
