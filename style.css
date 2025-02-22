@@ -16,7 +16,7 @@ body{
     margin-top: 20px;
     width: 100%;
     height: 120vh;
-    background-image: url(mainbg.jpeg);
+    background-image: url('mainbg.jpeg');
     background-size: cover;
     background-position: center;
 }
