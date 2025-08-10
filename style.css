@@ -1,3 +1,7 @@
+header, section:first-of-type {
+  padding-top: 80px; /* adjust to navbar height */
+}
+
 .navbar {
   background: rgba(0, 0, 0, 0.4); /* semi-transparent black */
   backdrop-filter: blur(6px);     /* adds a glassy effect */
@@ -455,5 +459,6 @@ form .btn1{
     margin-top: -20px;
     display: block;
 }
+
 
 
